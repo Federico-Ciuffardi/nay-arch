@@ -1,0 +1,115 @@
+#!/bin/sh
+
+#############
+# functions #
+#############
+
+# usage: 'draw_spinner [step_comment] [command] [args..]
+function execute_step(){
+  step_comment=$1
+  shift
+  if [ $verbose -gt 0 ] ; then
+    echo "$step_comment"
+    $@
+  else
+    draw_spinner "$step_comment" $@
+  fi
+  return $?
+}
+
+# usage: 'draw_spinner [comment] [command] [args..]
+function draw_spinner(){
+  comment=$1
+  shift
+
+  ($@ &>/dev/null) &
+  pid=$!
+  i=1
+  sp="/-\|"
+  echo -n ' '
+
+  while [ -d /proc/$pid ] ; do
+    sleep '0.10'
+    printf "\r   ${sp:i++%${#sp}:1} $comment"
+  done
+
+  wait $pid
+
+  ecode=$?
+
+  if [ $ecode -eq 0 ] ; then
+    printf "\r   \u001b[32m✓\u001b[0m "
+  else
+    printf "\r   \u001b[31mx\u001b[0m "
+  fi
+  printf "$comment\n"
+  return $ecode
+}
+
+# usage: 'update [root] [repo]'
+function update(){
+  root=$1
+  shift
+  repo=$1
+  shift
+  compile="$@"
+
+  pkg_name=${repo##*/}
+  echo ":: Updating $pkg_name"
+  sudo -u $SUDO_USER mkdir -p "$root"
+  cd "$root"
+  
+  if [ ! -d $pkg_name ] ; then
+    just_cloned=true
+    execute_step "git clone" "sudo -u $SUDO_USER git clone --progress $repo"
+    [ $? -eq 0 ] || return $?
+    cd $pkg_name
+  else
+    just_cloned=false
+    cd $pkg_name
+    execute_step "git fetch" "sudo -u $SUDO_USER git fetch"
+    [ $? -eq 0 ] || return $?
+  fi
+
+  if ! $just_cloned && ([ ! -z "`git rev-list origin/master..HEAD`" ]  || [ ! -z "`git status -s`" ] ) ; then
+    printf "\e[1A   \u001b[33m!\u001b[0m Has local changes!\n"
+    return 201
+  elif ! $just_cloned && [ -z "`git rev-list HEAD..origin/master`" ] ; then
+    printf "\e[1A   \u001b[32m✓\u001b[0m Up to date!\n"
+    return 200
+  else
+    execute_step "git pull" "sudo -u $SUDO_USER git pull"
+    [ $? -eq 0 ] || return $?
+    [ -z "$compile" ] || $compile
+    return $?
+  fi
+
+}
+
+################
+# Declarations #
+################
+
+verbose=$1
+[ -z $verbose ] && verbose=0
+
+########
+# Main #
+########
+
+[ "$UID" -eq 0 ] || exec sudo -E bash "$0" "$@"
+
+update "$HOME/.build" "https://github.com/federico-ciuffardi/dwm" "execute_step "make" "sudo make install""
+printf "\n"
+
+update "$HOME/.build" "https://github.com/federico-ciuffardi/dwmblocks" "execute_step "make" "sudo make install""
+printf "\n"
+
+update "$HOME/.build" "https://github.com/federico-ciuffardi/st" "execute_step "make" "sudo make install""
+printf "\n"
+
+update "$HOME/.tmux/plugins" "https://github.com/tmux-plugins/tpm"
+printf "\n"
+
+update "$HOME" "https://github.com/federico-ciuffardi/bin"
+printf "\n"
