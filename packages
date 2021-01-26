@@ -1,0 +1,165 @@
+# core
+## mail
+mutt-wizard-git
+abook
+thunderbird
+
+## calculator
+speedcrunch
+
+## torrent
+qbittorrent
+
+## pdf
+zathura
+zathura-pdf-poppler
+
+## terminal
+tmux
+### tmux plug
+ruby
+
+## text editor
+neovim
+python-pynvim
+vim-plug
+fzf
+fd
+ripgrep
+ag
+delta
+bat
+
+## editor
+screengrab
+gimp
+sxiv
+
+## video
+mpd
+#stremio
+
+## audio
+pulseaudio
+pavucontrol-qt
+mpd
+ncmpcpp
+mpc
+alsa-utils
+playerctl
+
+## news
+newsboat
+
+## backup
+timeshift
+
+## shell
+zsh
+antigen
+
+## monitoring
+nethogs
+ncdu
+htop
+
+## web browser
+firefox
+firefox-tridactyl-native
+
+## file manager
+ranger
+ueberzug
+udevil
+ffmpegthumbnailer
+
+# notification
+notification-daemon
+dunst-git
+
+## daemons
+parcellite
+cronie
+
+## xorg
+xorg
+xorg-xinit
+xorg-xrandr
+arandr
+xorg-xmodmap
+numlockx
+unclutter
+xorg-xset
+xorg-xclipboard
+xorg-xkill
+xorg-xev
+xclip
+xdotool
+
+## compositor
+picom-git
+
+## compresion
+atool
+zip
+
+## utils
+colorpicker
+
+## arch
+pacman-contrib
+reflector
+
+## misc
+termdown
+xdg-user-dirs
+redshift
+intel-ucode
+dkms
+libxft-bgra
+lxqt-sudo
+man
+man-db
+sudo
+grep
+wget
+
+## misc apps
+yad
+calcurse
+silver-searcher-git
+xscreensaver
+whatsapp-nativefier-dark
+
+## secrets 
+gnome-keyring
+
+## network
+speed-test
+network-manager-applet
+dhclient
+
+## rofi
+rofi
+rofi-dmenu
+
+# theming
+## web browser
+shadowfox-updater
+
+## icons
+papirus-icon-theme
+
+## wallpaper
+nitrogen
+
+## look and feel
+lxappearance
+qt5ct
+
+## fonts
+powerline-fonts-git
+nerd-fonts-source-code-pro
+ttf-roboto-mono
+noto-fonts-emoji
+ttf-joypixels
