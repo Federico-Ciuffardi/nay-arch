@@ -70,7 +70,7 @@ verbose=$1
 # Main #
 ########
 
-[ "$UID" -eq 0 ] || exec sudo -E bash "$0" "$@"
+[ "$UID" -eq 0 ] || exit 1 #exec sudo -E bash "$0" "$@"
 
 update "$HOME/.build" "https://github.com/federico-ciuffardi/dwm" "execute_step "make" "sudo make install""
 
