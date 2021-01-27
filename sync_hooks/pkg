@@ -20,7 +20,7 @@ fi
 
 draw_heading 3 "Install packages"
 
-sudo draw_spinner "Updating mirror list" "reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+sudo "source /usr/lib/naylib ; draw_spinner "Updating mirror list" "reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist""
 
 yay -Syu --noconfirm
 
