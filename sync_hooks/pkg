@@ -16,7 +16,7 @@ if [ $? -ne 0 ] ; then
   yay -S reflector
 fi
 
-execute_step "Updating mirror list" "sudo reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+draw_spinner "Updating mirror list" "sudo reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
 
 yay -Syu --noconfirm
 
