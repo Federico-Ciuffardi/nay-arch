@@ -6,7 +6,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 yay -v &> /dev/null
 if [ $? -ne 0 ] ; then
-  draw_heading 3 "Install yay"
+  draw_heading "Install yay"
   sudo pacman -Syu
   sudo pacman -S --noconfirm --needed git base-devel 
   git config --global pull.rebase true
@@ -18,7 +18,7 @@ if [ $? -ne 0 ] ; then
   yay -S reflector
 fi
 
-draw_heading 3 "Install packages"
+draw_heading "Install packages"
 
 sudo -v
 sudo_draw_spinner "Updating mirror list" "reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"

@@ -28,7 +28,7 @@ function update(){
   compile="$@"
 
   pkg_name=${repo##*/}
-  draw_heading 3 "Updating $pkg_name"
+  draw_heading "Updating $pkg_name"
   mkdir -p "$root"
   cd "$root"
   
