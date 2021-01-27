@@ -28,7 +28,7 @@ function update(){
   compile="$@"
 
   pkg_name=${repo##*/}
-  echo ":: Updating $pkg_name"
+  echo "### Updating $pkg_name"
   sudo -u $SUDO_USER mkdir -p "$root"
   cd "$root"
   
