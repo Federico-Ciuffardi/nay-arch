@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source /usr/lib/naylib
+
 #############
 # functions #
 #############
@@ -15,35 +17,6 @@ function execute_step(){
     draw_spinner "$step_comment" $@
   fi
   return $?
-}
-
-# usage: 'draw_spinner [comment] [command] [args..]
-function draw_spinner(){
-  comment=$1
-  shift
-
-  ($@ &>/dev/null) &
-  pid=$!
-  i=1
-  sp="/-\|"
-  echo -n ' '
-
-  while [ -d /proc/$pid ] ; do
-    sleep '0.10'
-    printf "\r   ${sp:i++%${#sp}:1} $comment"
-  done
-
-  wait $pid
-
-  ecode=$?
-
-  if [ $ecode -eq 0 ] ; then
-    printf "\r   \u001b[32m✓\u001b[0m "
-  else
-    printf "\r   \u001b[31mx\u001b[0m "
-  fi
-  printf "$comment\n"
-  return $ecode
 }
 
 # usage: 'update [root] [repo]'
