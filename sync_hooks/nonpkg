@@ -85,4 +85,3 @@ update "$HOME/.tmux/plugins" "https://github.com/tmux-plugins/tpm"
 printf "\n"
 
 update "$HOME" "https://github.com/federico-ciuffardi/bin"
-printf "\n"
