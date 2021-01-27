@@ -28,7 +28,7 @@ function update(){
   compile="$@"
 
   pkg_name=${repo##*/}
-  echo "### Updating $pkg_name"
+  draw_heading 3 "Updating $pkg_name"
   sudo -u $SUDO_USER mkdir -p "$root"
   cd "$root"
   
@@ -73,15 +73,11 @@ verbose=$1
 [ "$UID" -eq 0 ] || exec sudo -E bash "$0" "$@"
 
 update "$HOME/.build" "https://github.com/federico-ciuffardi/dwm" "execute_step "make" "sudo make install""
-printf "\n"
 
 update "$HOME/.build" "https://github.com/federico-ciuffardi/dwmblocks" "execute_step "make" "sudo make install""
-printf "\n"
 
 update "$HOME/.build" "https://github.com/federico-ciuffardi/st" "execute_step "make" "sudo make install""
-printf "\n"
 
 update "$HOME/.tmux/plugins" "https://github.com/tmux-plugins/tpm"
-printf "\n"
 
 update "$HOME" "https://github.com/federico-ciuffardi/bin"
