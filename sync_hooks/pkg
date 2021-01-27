@@ -30,4 +30,3 @@ for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
     fi
   fi
 done
-
