@@ -45,10 +45,10 @@ function update(){
   fi
 
   if ! $just_cloned && ([ ! -z "`git rev-list origin/master..HEAD`" ]  || [ ! -z "`git status -s`" ] ) ; then
-    printf "\e[1A   \u001b[33m!\u001b[0m Has local changes!\n"
+    printf "\e[1A\u001b[33m!\u001b[0m Has local changes!\n"
     return 201
   elif ! $just_cloned && [ -z "`git rev-list HEAD..origin/master`" ] ; then
-    printf "\e[1A   \u001b[32m✓\u001b[0m Up to date!\n"
+    printf "\e[1A\u001b[32m✓\u001b[0m Up to date!\n"
     return 200
   else
     execute_step "git pull" "sudo -u $SUDO_USER git pull"
