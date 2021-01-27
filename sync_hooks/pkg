@@ -2,6 +2,8 @@
 
 source /usr/lib/naylib
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 yay -v &> /dev/null
 if [ $? -ne 0 ] ; then
   echo ":: yay not installed, installing..."
@@ -21,7 +23,7 @@ draw_spinner "Updating mirror list" "sudo reflector --verbose --latest 10 --sort
 yay -Syu --noconfirm
 
 echo "-> installing all packages"
-for pkg in `cat "../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
+for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
   if ! yay -Q "$pkg" &> /dev/null ; then
     if ! yay -Qg "$pkg" &> /dev/null ; then
       yay -S --noconfirm --needed --noredownload --answerclean --sudoloop "$pkg"
