@@ -29,18 +29,18 @@ function update(){
 
   pkg_name=${repo##*/}
   draw_heading 3 "Updating $pkg_name"
-  sudo -u $SUDO_USER mkdir -p "$root"
+  mkdir -p "$root"
   cd "$root"
   
   if [ ! -d $pkg_name ] ; then
     just_cloned=true
-    execute_step "git clone" "sudo -u $SUDO_USER git clone --progress $repo"
+    execute_step "git clone" "git clone --progress $repo"
     [ $? -eq 0 ] || return $?
     cd $pkg_name
   else
     just_cloned=false
     cd $pkg_name
-    execute_step "git fetch" "sudo -u $SUDO_USER git fetch"
+    execute_step "git fetch" "git fetch"
     [ $? -eq 0 ] || return $?
   fi
 
@@ -51,7 +51,7 @@ function update(){
     printf "\e[1A\u001b[32m✓\u001b[0m Up to date!\n"
     return 200
   else
-    execute_step "git pull" "sudo -u $SUDO_USER git pull"
+    execute_step "git pull" "git pull"
     [ $? -eq 0 ] || return $?
     [ -z "$compile" ] || $compile
     return $?
