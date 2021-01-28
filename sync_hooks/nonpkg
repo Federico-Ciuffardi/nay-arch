@@ -1,7 +1,6 @@
 #!/bin/sh
 
 source /usr/lib/naylib
-set -o xtrace       # Trace the execution of the script (debug)
 
 #############
 # functions #
@@ -82,3 +81,5 @@ update "$HOME/.build" "https://github.com/federico-ciuffardi/st" "execute_step "
 update "$HOME/.tmux/plugins" "https://github.com/tmux-plugins/tpm"
 
 update "$HOME" "https://github.com/federico-ciuffardi/bin"
+
+return 0
