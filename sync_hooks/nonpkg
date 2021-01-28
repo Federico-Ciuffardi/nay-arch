@@ -6,7 +6,6 @@ source /usr/lib/naylib
 # functions #
 #############
 
-# usage: 'draw_spinner [step_comment] [command] [args..]
 function execute_step(){
   step_comment=$1
   shift
@@ -70,8 +69,6 @@ verbose=$1
 # Main #
 ########
 
-# [ "$UID" -eq 0 ] || exit 1 #exec sudo -E bash "$0" "$@"
-
 update "$HOME/.build" "https://github.com/federico-ciuffardi/dwm" "execute_step "make" "sudo make install""
 
 update "$HOME/.build" "https://github.com/federico-ciuffardi/dwmblocks" "execute_step "make" "sudo make install""
@@ -82,4 +79,4 @@ update "$HOME/.tmux/plugins" "https://github.com/tmux-plugins/tpm"
 
 update "$HOME" "https://github.com/federico-ciuffardi/bin"
 
-return 0
+exit 0
