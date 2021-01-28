@@ -1,6 +1,7 @@
 #!/bin/sh
 
 source /usr/lib/naylib
+set -o xtrace       # Trace the execution of the script (debug)
 
 #############
 # functions #
