@@ -26,7 +26,7 @@ function update(){
   shift
   compile="$@"
 
-  pkg_name=${repo##*/}
+  pkg_name="`echo ${repo_url##*/} | cut -d'.' -f1`"
   draw_heading "Updating $pkg_name"
   mkdir -p "$root"
   cd "$root"
