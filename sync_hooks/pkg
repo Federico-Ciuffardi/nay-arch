@@ -20,8 +20,7 @@ fi
 
 draw_heading "Install packages"
 
-sudo -v
-sudo_draw_spinner "Updating mirror list" "reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+draw_spinner "Updating mirror list" "sudo reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
 
 yay -Syu --noconfirm
 
