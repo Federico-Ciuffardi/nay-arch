@@ -2,7 +2,7 @@
 ## mail
 mutt-wizard-git
 abook
-thunderbird
+urlscan
 
 ## calculator
 speedcrunch
@@ -129,6 +129,7 @@ calcurse
 silver-searcher-git
 xscreensaver
 whatsapp-nativefier-dark
+figlet
 
 ## secrets 
 gnome-keyring
