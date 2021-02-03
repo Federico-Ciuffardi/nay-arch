@@ -77,6 +77,9 @@ update "$HOME/.build" "https://github.com/federico-ciuffardi/st" "execute_step "
 
 update "$HOME/.build" "git@github.com:Federico-Ciuffardi/sxiv.git" "execute_step "make" "sudo make install""
 
+
+update "$HOME/.build" "git@github.com:pbrisbin/mail-query.git" "execute_step "make" "sudo make install""
+
 update "$HOME/.tmux/plugins" "https://github.com/tmux-plugins/tpm"
 
 update "$HOME" "https://github.com/federico-ciuffardi/bin"
