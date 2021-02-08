@@ -40,6 +40,7 @@ mpd
 ## audio
 pulseaudio
 pavucontrol-qt
+ponymix
 mpd
 ncmpcpp
 mpc
@@ -133,6 +134,9 @@ figlet
 
 ## secrets 
 gnome-keyring
+pass
+pass-otp
+rofi-pass
 
 ## network
 speed-test
