@@ -1,0 +1,3 @@
+event=jack/headphone
+action=pkill -RTMIN+2 dwmblocks
+

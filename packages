@@ -74,12 +74,13 @@ udiskie
 ffmpegthumbnailer
 
 # notification
-notification-daemon
 dunst-git
 
 ## daemons
+notification-daemon
 parcellite
 cronie
+acpid
 
 ## xorg
 xorg
