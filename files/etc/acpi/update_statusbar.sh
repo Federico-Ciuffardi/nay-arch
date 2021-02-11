@@ -2,11 +2,11 @@
 
 case "$1" in
     jack/headphone)
-        pkill -RTMIN+2 dwmblocks
+        pkill -RTMIN+2 dwmblocks # audio
         ;;
     battery)
         sleep 0.5
-        pkill -RTMIN+15 dwmblocks
+        pkill -RTMIN+15 dwmblocks # battery
         ;;
 esac
 
