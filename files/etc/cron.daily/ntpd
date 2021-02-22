@@ -1,3 +1,4 @@
 #!/bin/sh
-ntpdate 129.6.15.28
+ntpdate pool.ntp.org
+
 
