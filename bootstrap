@@ -1,6 +1,7 @@
 # enable tty hooks (user set to fede and numlock on)
 systemctl enable getty@
 systemctl enable cronie.service
-systemctl start NetworkManager.service 
+systemctl enable NetworkManager.service 
 systemctl enable NetworkManager-dispatcher.service
 systemctl enable acpid.service
+systemctl enable ntpd.service
