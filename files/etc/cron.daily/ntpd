@@ -1,4 +1,2 @@
 #!/bin/sh
 /usr/bin/ntpdate pool.ntp.org
-
-
