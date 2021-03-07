@@ -128,11 +128,14 @@ wget
 
 ## misc apps
 yad
-calcurse
 silver-searcher-git
 xscreensaver
 whatsapp-nativefier-dark
 figlet
+### calcurse
+calcurse
+python-httplib2
+python-oauth2client
 
 ## secrets 
 gnome-keyring
