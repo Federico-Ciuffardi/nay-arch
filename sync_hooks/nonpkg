@@ -82,6 +82,6 @@ update "$HOME/.build" "git@github.com:pbrisbin/mail-query.git" "execute_step "ma
 
 update "$HOME/.tmux/plugins" "https://github.com/tmux-plugins/tpm"
 
-update "$HOME" "https://github.com/federico-ciuffardi/bin" "execute_step "make" "sh make.sh install""
+update "$HOME" "https://github.com/federico-ciuffardi/bin" "execute_step "make" "sudo sh make.sh install""
 
 exit 0
