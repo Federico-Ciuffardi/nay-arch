@@ -140,7 +140,7 @@ python-oauth2client
 gnome-keyring
 pass
 pass-otp
-rofi-pass
+passff-host
 
 ## network
 speed-test
