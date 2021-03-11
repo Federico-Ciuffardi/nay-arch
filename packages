@@ -53,6 +53,7 @@ newsboat
 ## shell
 zsh
 antigen
+zsh-syntax-highlighting
 
 ## monitoring
 nethogs
