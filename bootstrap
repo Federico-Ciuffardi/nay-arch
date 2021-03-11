@@ -1,7 +1,15 @@
+# Enable services
 systemctl enable getty@
 systemctl enable cronie.service
 systemctl enable NetworkManager.service 
 systemctl enable NetworkManager-dispatcher.service
 systemctl enable acpid.service
 systemctl enable ntpd.service
+
+# change shell
 chsh -s /usr/bin/zsh
+
+# GPG Agent use correct pinentry
+GPG_TTY=`tty`
+export GPG_TTY
+
