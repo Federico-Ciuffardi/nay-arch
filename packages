@@ -50,9 +50,6 @@ playerctl
 ## news
 newsboat
 
-## backup
-timeshift
-
 ## shell
 zsh
 antigen
@@ -129,7 +126,7 @@ wget
 yad
 silver-searcher-git
 xscreensaver
-whatsapp-nativefier-dark
+whatsapp-nativefier
 figlet
 ### calcurse
 calcurse

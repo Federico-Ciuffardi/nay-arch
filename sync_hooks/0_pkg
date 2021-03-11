@@ -8,14 +8,14 @@ yay -v &> /dev/null
 if [ $? -ne 0 ] ; then
   draw_heading "Install yay"
   sudo pacman -Syu
-  sudo pacman -S --noconfirm --needed git base-devel 
+  sudo pacman -S --noconfirm git base-devel 
   git config --global pull.rebase true
   cd /tmp
   git clone https://aur.archlinux.org/yay.git
   cd yay
-  makepkg -si
+  makepkg -si --noconfirm 
   echo
-  yay -S reflector
+  yay -S reflector --noconfirm 
 fi
 
 draw_heading "Install packages"
