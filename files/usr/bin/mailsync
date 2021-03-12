@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # - Syncs mail for all accounts, or a single account given as an argument.
 # - Displays a notification showing the number of new mails.
@@ -31,7 +31,15 @@ eval "$(grep -h -- \
 case "$(readlink -f /sbin/init)" in
 	*systemd*) export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus ;;
 esac
-export GPG_TTY=$TTY
+
+GPG_TTY=`tty`
+export GPG_TTY
+
+DISPLAY=":0"
+export DISPLAY
+
+# PASSWORD_STORE_GPG_OPTS="--verbose --debug-level basic"
+# export PASSWORD_STORE_GPG_OPTS
 
 [ -n "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC" || MBSYNCRC="$HOME/.mbsyncrc"
 
