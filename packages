@@ -11,8 +11,7 @@ speedcrunch
 qbittorrent
 
 ## pdf
-zathura
-zathura-pdf-poppler
+okular
 
 ## terminal
 tmux
