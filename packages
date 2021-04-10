@@ -121,6 +121,10 @@ sudo
 grep
 wget
 
+## backup
+timeshift
+polkit-gnome
+
 ## misc apps
 yad
 xscreensaver
