@@ -120,6 +120,7 @@ man-db
 sudo
 grep
 wget
+libxft-bgra
 
 ## backup
 timeshift
