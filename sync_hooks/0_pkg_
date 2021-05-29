@@ -1,0 +1,40 @@
+#! /bin/bash
+
+source /usr/lib/naylib
+
+draw_heading "Install packages is disabled"
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+yay -v &> /dev/null
+if [ $? -ne 0 ] ; then
+  draw_heading "Install yay"
+  sudo pacman -Syu
+  sudo pacman -S --noconfirm git base-devel 
+  git config --global pull.rebase true
+  cd /tmp
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si --noconfirm 
+  echo
+  yay -S reflector --noconfirm 
+fi
+
+draw_heading "Install packages"
+
+draw_spinner "Updating mirror list" "sudo reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+
+yay -Syu --sudoloop --noconfirm
+pkill -RTMIN+3 dwmblocks
+
+for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
+  if ! yay -Sqg "$pkg" &> /dev/null ; then
+    yay -Q "$pkg" &> /dev/null && continue
+    yay -S --noconfirm --needed --noredownload --answerclean --sudoloop "$pkg"
+  else
+    for gpkg in `yay -Sqg "$pkg"` ; do
+      yay -Q "$gpkg" &> /dev/null && continue
+      yay -S --noconfirm --needed --noredownload --answerclean --sudoloop "$gpkg"
+    done
+  fi
+done
