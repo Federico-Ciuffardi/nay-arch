@@ -14,7 +14,7 @@ qbittorrent
 okular
 
 ## terminal
-tmux
+tmux-git
 ### tmux plug
 ruby
 
@@ -113,7 +113,6 @@ xdg-user-dirs
 redshift
 intel-ucode
 dkms
-libxft-bgra
 lxqt-sudo
 man
 man-db
@@ -171,3 +170,4 @@ nerd-fonts-source-code-pro
 ttf-roboto-mono
 noto-fonts-emoji
 ttf-joypixels
+ttf-croscore
