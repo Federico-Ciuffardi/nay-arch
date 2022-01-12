@@ -1,4 +1,18 @@
 # core
+## misc
+libxft-bgra
+termdown
+xdg-user-dirs
+redshift
+intel-ucode
+dkms
+lxqt-sudo
+man
+man-db
+sudo
+grep
+wget
+
 ## mail
 mutt-wizard-git
 abook
@@ -106,20 +120,6 @@ colorpicker
 ## arch
 pacman-contrib
 reflector
-
-## misc
-termdown
-xdg-user-dirs
-redshift
-intel-ucode
-dkms
-lxqt-sudo
-man
-man-db
-sudo
-grep
-wget
-libxft-bgra
 
 ## backup
 timeshift
