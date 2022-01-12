@@ -12,6 +12,7 @@ man-db
 sudo
 grep
 wget
+main/bin
 
 ## mail
 mutt-wizard-git
