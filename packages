@@ -15,6 +15,7 @@ wget
 
 ## mail
 mutt-wizard-git
+main/mail-query
 abook
 urlscan
 
@@ -29,8 +30,7 @@ okular
 
 ## terminal
 tmux-git
-### tmux plug
-ruby
+main/tpm
 
 ## text editor
 neovim
@@ -43,12 +43,15 @@ the_silver_searcher
 bat
 
 ## editor
-flameshot
+xp-pen-tablet
 gimp
+xournalpp
+
+## screen cap
+flameshot
 
 ## video
 mpd
-#stremio
 
 ## audio
 pulseaudio
@@ -65,8 +68,6 @@ newsboat
 
 ## shell
 zsh
-antigen
-zsh-syntax-highlighting
 
 ## monitoring
 nethogs
@@ -76,11 +77,18 @@ htop
 ## web browser
 firefox
 
-## file manager
+## file manager 
 ranger
 ueberzug
 udiskie
 ffmpegthumbnailer
+
+# image
+main/sxiv
+
+## compresion
+atool
+zip
 
 # notification
 dunst-git
@@ -107,23 +115,19 @@ xorg-xev
 xclip
 xdotool
 
-## compositor
-picom-git
+### wm
+main/dwm
+main/dwmblocks
+main/st
 
-## compresion
-atool
-zip
+### compositor
+picom-git
 
 ## utils
 colorpicker
 
-## arch
-pacman-contrib
-reflector
-
 ## backup
 timeshift
-polkit-gnome
 
 ## misc apps
 yad
@@ -137,9 +141,9 @@ python-oauth2client
 
 ## secrets 
 gnome-keyring
+polkit-gnome
 pass
 pass-otp
-passff-host
 
 ## network
 speed-test
@@ -151,8 +155,6 @@ rofi
 rofi-dmenu
 
 # theming
-## web browser
-shadowfox-updater
 
 ## icons
 papirus-icon-theme
@@ -165,9 +167,7 @@ lxappearance
 qt5ct
 
 ## fonts
-powerline-fonts-git
 nerd-fonts-source-code-pro
-ttf-roboto-mono
-noto-fonts-emoji
-ttf-joypixels
-ttf-croscore
+nerd-fonts-fira-code
+noto-color-emoji-fontconfig
+ttf-ubuntu-font-family
