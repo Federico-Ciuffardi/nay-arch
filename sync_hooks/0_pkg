@@ -15,11 +15,11 @@ for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
   sudo -v
   if ! yay -Sqg "$pkg" &> /dev/null ; then
     yay -Q "$pkg" &> /dev/null && continue
-    draw_spinner "Installing $pkg" "yay -S --noconfirm --needed --noredownload --answerclean --sudoloop "$pkg""
+    draw_spinner "Installing $pkg" "yay -S --noconfirm --needed --noredownload --answerclean --sudoloop --useask "$pkg""
   else
     for gpkg in `yay -Sqg "$pkg"` ; do
       yay -Q "$gpkg" &> /dev/null && continue
-      draw_spinner "Installing $pkg" "yay -S --noconfirm --needed --noredownload --answerclean --sudoloop "$gpkg""
+      draw_spinner "Installing $pkg" "yay -S --noconfirm --needed --noredownload --answerclean --sudoloop --useask "$gpkg""
     done
   fi
 done
