@@ -13,12 +13,5 @@ pkill -RTMIN+3 dwmblocks
 
 for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
   sudo -v
-  if yay -Sqg "$pkg" &> /dev/null ; then
-    for gpkg in `yay -Sqg "$pkg"` ; do
-      yay -Q "$gpkg" &> /dev/null && continue
-      uur native "$pkg"
-    done
-  else yay -Q "$pkg" &> /dev/null 
-    uur native "$pkg"
-  fi
+  uur native "$pkg"
 done

@@ -7,7 +7,6 @@ redshift
 intel-ucode
 dkms
 lxqt-sudo
-man
 man-db
 sudo
 grep
