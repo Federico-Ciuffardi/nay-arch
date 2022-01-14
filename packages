@@ -90,7 +90,7 @@ atool
 zip
 
 # notification
-dunst-git
+dunst
 
 ## daemons
 notification-daemon
