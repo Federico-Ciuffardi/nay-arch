@@ -13,5 +13,5 @@ pkill -RTMIN+3 dwmblocks
 
 for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
   sudo -v
-  uur native "$pkg"
+  uur native "$pkg" "Installing"
 done
