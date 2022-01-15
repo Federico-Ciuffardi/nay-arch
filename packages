@@ -155,6 +155,10 @@ rofi-dmenu
 
 # theming
 
+## themes
+breeze
+breeze-gtk
+
 ## icons
 papirus-icon-theme
 
