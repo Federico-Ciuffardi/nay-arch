@@ -9,6 +9,7 @@ draw_heading "Install packages"
 draw_spinner "Updating mirror list" "sudo reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
 
 yay -Syu --sudoloop --noconfirm
+uur upgrade
 pkill -RTMIN+3 dwmblocks
 
 for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
