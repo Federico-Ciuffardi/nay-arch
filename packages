@@ -12,6 +12,7 @@ sudo
 grep
 wget
 main/bin
+pacdiff
 
 ## mail
 mutt-wizard-git
