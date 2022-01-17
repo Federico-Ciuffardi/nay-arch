@@ -29,6 +29,7 @@ qbittorrent
 okular
 
 ## terminal
+main/st
 tmux-git
 main/tpm
 
@@ -104,22 +105,16 @@ ntp
 ## xorg
 xorg
 xorg-xinit
-xorg-xrandr
+xorg-xclipboard
 arandr
-xorg-xmodmap
 numlockx
 unclutter
-xorg-xset
-xorg-xclipboard
-xorg-xkill
-xorg-xev
 xclip
 xdotool
 
 ### wm
 main/dwm
 main/dwmblocks
-main/st
 
 ### compositor
 picom-git
