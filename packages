@@ -137,6 +137,9 @@ calcurse
 python-httplib2
 python-oauth2client
 
+## laptop
+xf86-input-synaptics
+
 ## secrets 
 gnome-keyring
 polkit-gnome
