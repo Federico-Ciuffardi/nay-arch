@@ -5,7 +5,7 @@ case "$1" in
         pkill -RTMIN+2 dwmblocks # audio
         ;;
     battery)
-        sleep 0.5
+        sleep 1
         pkill -RTMIN+15 dwmblocks # battery
         ;;
 esac
