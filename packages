@@ -139,6 +139,7 @@ python-oauth2client
 
 ## laptop
 xf86-input-synaptics
+blight
 
 ## secrets 
 gnome-keyring
