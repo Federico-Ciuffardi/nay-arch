@@ -35,6 +35,7 @@ main/tpm
 
 ## text editor
 neovim
+neovim-remote
 python-pynvim
 vim-plug
 fzf
