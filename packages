@@ -118,7 +118,7 @@ main/dwm
 main/dwmblocks
 
 ### compositor
-picom-git
+picom-jonaburg-git
 
 ## utils
 colorpicker
