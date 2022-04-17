@@ -74,7 +74,7 @@ zsh
 ## monitoring
 nethogs
 ncdu
-htop
+gotop
 
 ## web browser
 firefox
