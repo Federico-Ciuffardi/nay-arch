@@ -135,6 +135,10 @@ figlet
 kdeconnect
 fortune-mod
 
+## office
+gnumeric
+abiword
+
 ### calcurse
 calcurse
 python-httplib2
