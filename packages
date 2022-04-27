@@ -56,7 +56,13 @@ flameshot
 mpd
 
 ## audio
-pulseaudio
+### pipewire
+pipewire
+wireplumber
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+### utils
 pavucontrol-qt
 ponymix
 mpd
