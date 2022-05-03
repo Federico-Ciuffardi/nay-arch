@@ -150,6 +150,11 @@ calcurse
 python-httplib2
 python-oauth2client
 
+### tasks
+taskell
+task
+taskwarrior-tui
+
 ## laptop
 xf86-input-synaptics
 blight
