@@ -193,6 +193,6 @@ qt5ct
 
 ## fonts
 nerd-fonts-source-code-pro
-nerd-fonts-fira-code
 noto-color-emoji-fontconfig
 ttf-ubuntu-font-family
+ttf-firacode-nerd
