@@ -3,7 +3,6 @@
 libxft-bgra
 termdown
 xdg-user-dirs
-redshift
 intel-ucode
 dkms
 lxqt-sudo
@@ -124,7 +123,7 @@ main/dwm
 main/dwmblocks
 
 ### compositor
-picom-jonaburg-git
+picom
 
 ## utils
 colorpicker
