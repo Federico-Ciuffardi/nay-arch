@@ -178,7 +178,6 @@ rofi-dmenu
 # theming
 
 ## themes
-lightly-qt
 breeze-gtk
 
 ## icons
