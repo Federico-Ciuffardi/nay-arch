@@ -60,7 +60,7 @@ mpd
 pipewire
 wireplumber
 pipewire-alsa
-pipewire-jack
+# pipewire-jack
 pipewire-pulse
 ### utils
 pavucontrol-qt
