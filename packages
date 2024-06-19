@@ -83,6 +83,7 @@ btop
 
 ## web browser
 firefox
+firefox-tridactyl-native
 
 ## file manager 
 ranger
@@ -140,6 +141,7 @@ kdeconnect
 fortune-mod
 whatsapp-nativefier-notray-hook 
 youtube-music
+slack-desktop
 
 ## office
 gnumeric
