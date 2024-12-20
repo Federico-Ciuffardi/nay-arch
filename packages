@@ -89,6 +89,7 @@ dragon-drag-and-drop
 
 # image
 main/sxiv
+libexif
 
 ## compresion
 atool
