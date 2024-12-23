@@ -55,7 +55,8 @@ flameshot
 mpd
 
 ## audio
-pulseaudio
+pipewire
+pipewire-pulse
 ### utils
 pavucontrol-qt
 ponymix
