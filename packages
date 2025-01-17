@@ -13,11 +13,6 @@ wget
 main/bin
 pacman-contrib
 
-## mail
-mutt-wizard-git
-main/mail-query
-urlscan
-
 ## calculator
 speedcrunch
 
@@ -147,12 +142,6 @@ abiword
 calcurse
 python-httplib2
 python-oauth2client
-
-### tasks
-taskell
-task
-taskwarrior-tui
-timew
 
 ## laptop
 xf86-input-synaptics
