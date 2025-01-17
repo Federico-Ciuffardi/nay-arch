@@ -13,8 +13,13 @@ wget
 main/bin
 pacman-contrib
 
+## mail
+# mutt-wizard-git
+# main/mail-query
+# urlscan
+
 ## calculator
-speedcrunch
+# speedcrunch
 
 ## torrent
 qbittorrent
@@ -29,7 +34,6 @@ main/tpm
 
 ## text editor
 neovim
-neovim-remote
 python-pynvim
 vim-plug
 fzf
@@ -39,7 +43,6 @@ the_silver_searcher
 bat
 
 ## editor
-xp-pen-tablet
 gimp
 xournalpp
 
@@ -62,7 +65,7 @@ alsa-utils
 playerctl
 
 ## news
-newsboat
+# newsboat
 
 ## shell
 zsh
@@ -139,9 +142,9 @@ gnumeric
 abiword
 
 ### calcurse
-calcurse
-python-httplib2
-python-oauth2client
+# calcurse
+# python-httplib2
+# python-oauth2client
 
 ## laptop
 xf86-input-synaptics
