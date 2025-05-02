@@ -1,6 +1,5 @@
 # core
 ## misc
-libxft-bgra
 termdown
 xdg-user-dirs
 intel-ucode
@@ -84,7 +83,7 @@ ranger
 ueberzug
 udiskie
 ffmpegthumbnailer
-dragon-drag-and-drop
+dragon-drop
 
 # image
 main/sxiv
@@ -184,7 +183,6 @@ kvantum-qt5
 kvantum
 
 ## fonts
-nerd-fonts-source-code-pro
 noto-color-emoji-fontconfig
 ttf-ubuntu-font-family
 ttf-firacode-nerd
