@@ -2,7 +2,6 @@
 ## misc
 termdown
 xdg-user-dirs
-intel-ucode
 dkms
 lxqt-sudo
 man-db
@@ -10,7 +9,6 @@ sudo
 grep
 wget
 main/bin
-pacman-contrib
 
 ## mail
 # mutt-wizard-git
@@ -28,17 +26,13 @@ okular
 
 ## terminal
 main/st
-tmux-git
+tmux
 main/tpm
 
 ## text editor
 neovim
-python-pynvim
-vim-plug
 fzf
-fd
 ripgrep
-the_silver_searcher
 bat
 
 ## editor
@@ -56,7 +50,6 @@ pipewire
 pipewire-pulse
 ### utils
 pavucontrol-qt
-ponymix
 mpd
 ncmpcpp
 mpc
@@ -76,18 +69,15 @@ btop
 
 ## web browser
 firefox
-firefox-tridactyl-native
 
 ## file manager 
 ranger
 ueberzug
 udiskie
 ffmpegthumbnailer
-dragon-drop
 
 # image
 main/sxiv
-libexif
 
 ## compresion
 atool
@@ -99,14 +89,11 @@ dunst
 ## daemons
 notification-daemon
 parcellite
-# cronie
 acpid
 ntp
 
 ## xorg
 xorg
-xorg-xinit
-xorg-xclipboard
 arandr
 numlockx
 unclutter
@@ -133,42 +120,21 @@ xscreensaver
 figlet
 kdeconnect
 fortune-mod
-youtube-music-bin
 slack-desktop
-main/whatsapp-nativefier
 
 ## office
 gnumeric
 abiword
 
-### calcurse
-# calcurse
-# python-httplib2
-# python-oauth2client
-
-## laptop
-xf86-input-synaptics
-blight
-
 ## secrets 
 gnome-keyring
-polkit-gnome
 pass
 pass-otp
 
-## network
-speed-test
-network-manager-applet
-dhclient
-
 ## rofi
 rofi
-rofi-dmenu
 
 # theming
-
-## themes
-breeze-gtk
 
 ## icons
 papirus-icon-theme
@@ -179,10 +145,3 @@ nitrogen
 ## look and feel
 lxappearance
 qt5ct
-kvantum-qt5
-kvantum
-
-## fonts
-noto-color-emoji-fontconfig
-ttf-ubuntu-font-family
-ttf-firacode-nerd

@@ -1,0 +1,33 @@
+# Arch only 
+cronie
+intel-ucode
+pacman-contrib
+python-pynvim
+xorg-xinit
+xorg-xclipboard
+polkit-gnome
+
+# Only wanted on Arch
+main/whatsapp-nativefier
+
+# TODO
+kvantum-qt5
+kvantum
+breeze-gtk
+youtube-music-bin
+rofi-dmenu
+fd
+ponymix
+firefox-tridactyl-native
+dragon-drop
+libexif # dependency
+speed-test
+network-manager-applet
+noto-color-emoji-fontconfig
+ttf-ubuntu-font-family
+ttf-firacode-nerd
+
+## laptop
+xf86-input-synaptics
+blight
+

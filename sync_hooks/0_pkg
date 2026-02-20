@@ -16,3 +16,11 @@ for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
   sudo -v
   uur native "$pkg" "Installing"
 done
+
+distro_name=$(lsb_release -i | sed 's/.*:\s*//g')
+
+for pkg in `cat "$DIR/../packages-${distro_name}" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
+  sudo -v
+  uur native "$pkg" "Installing"
+done
+
