@@ -21,7 +21,6 @@ fd
 ponymix
 firefox-tridactyl-native
 dragon-drop
-libexif # dependency
 speed-test
 network-manager-applet
 noto-color-emoji-fontconfig
@@ -32,3 +31,5 @@ ttf-firacode-nerd
 xf86-input-synaptics
 blight
 
+## dependencies
+libexif
