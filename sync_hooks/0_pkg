@@ -2,24 +2,30 @@
 
 source /usr/lib/naylib
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 draw_heading "Install packages"
 
-draw_spinner "Updating mirror list" "sudo reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+distro_name=$(lsb_release -i | sed 's/.*:\s*//g')
+case "$distro_name" in
+Arch)
+  draw_spinner "Updating mirror list" "sudo reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist"
+  yay -Syu --sudoloop --noconfirm
+  ;;
+Ubuntu)
+  sudo apt update && sudo apt upgrade
+  ;;
+esac
 
-yay -Syu --sudoloop --noconfirm
 uur upgrade
 pkill -RTMIN+3 dwmblocks
 
-for pkg in `cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
+for pkg in $(cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
   sudo -v
   uur native "$pkg" "Installing"
 done
 
-distro_name=$(lsb_release -i | sed 's/.*:\s*//g')
-for pkg in `cat "$DIR/../packages_${distro_name}" | sed -e '/^[ \t]*#/d' | sed '/^$/d'` ; do
+for pkg in $(cat "$DIR/../packages_${distro_name}" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
   sudo -v
   uur native "$pkg" "Installing"
 done
-
