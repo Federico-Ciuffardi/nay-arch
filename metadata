@@ -7,5 +7,4 @@ etc/systemd/system/getty@tty1.service.d/override.conf 644
 usr/lib/systemd/system-sleep/update_statusbar.sh 744
 usr/share/dbus-1/services/org.freedesktop.Notifications.service 644
 usr/bin/mymailsync 755
-etc/X11/xorg.conf.d/70-synaptics.conf 644
 etc/security/faillock.conf 644
