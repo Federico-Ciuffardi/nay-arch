@@ -99,7 +99,7 @@ dunst
 ## daemons
 notification-daemon
 parcellite
-cronie
+# cronie
 acpid
 ntp
 
