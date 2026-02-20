@@ -28,7 +28,8 @@ ttf-ubuntu-font-family
 ttf-firacode-nerd
 
 ## laptop
-xf86-input-synaptics
+xf86-input-libinput
+libinput
 blight
 
 ## dependencies
