@@ -23,12 +23,14 @@ uur upgrade
 pkill -RTMIN+3 dwmblocks
 
 draw_heading "Sync packages"
+sudo -v
 for pkg in $(cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
-  sudo -v
   uur native "$pkg" "Installing"
+  sudo -v &
 done
 
 for pkg in $(cat "$DIR/../packages_${distro_name}" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
-  sudo -v
+  sudo -v &
   uur native "$pkg" "Installing"
+  sudo -v &
 done
