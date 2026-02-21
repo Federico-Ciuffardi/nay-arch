@@ -28,9 +28,7 @@ for pkg in $(cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
   uur native "$pkg" "Installing"
   sudo -v &
 done
-
 for pkg in $(cat "$DIR/../packages_${distro_name}" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
-  sudo -v &
   uur native "$pkg" "Installing"
   sudo -v &
 done
