@@ -1,7 +1,9 @@
-# TODO
+# TODO unify duplicates in packages_Ubuntu 
 
 main/neovim
 main/nerd-fonts
 fonts-noto-color-emoji
 breeze-gtk-theme
 fonts-firacode
+main/youtube-music
+main/ponymix

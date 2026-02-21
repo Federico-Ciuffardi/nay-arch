@@ -10,7 +10,7 @@ polkit-gnome
 # Only wanted on Arch
 main/whatsapp-nativefier
 
-# TODO
+# TODO unify duplicates in packages_Ubuntu 
 termdown
 kvantum-qt5
 kvantum
