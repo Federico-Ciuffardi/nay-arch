@@ -24,9 +24,9 @@ pkill -RTMIN+3 dwmblocks
 
 draw_heading "Sync packages"
 # Characters to alternate
-chars=('|' '/' '-' '\')
+chars=('|' '/' '-' '\\')
 i=0
-echo -ne "${chars[i % 2]}\r"
+echo -ne "${chars[i % ${#chars[@]}]}\r"
 ((i++))
 sudo -v
 # TODO merge loops
@@ -34,13 +34,13 @@ for pkg in $(cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
   uur native "$pkg" "Installing"
   sudo -v &
   # Print alternating character
-  echo -ne "${chars[i % 4]}\r"
+  echo -ne "${chars[i % ${#chars[@]}]}\r"
   ((i++))
 done
 for pkg in $(cat "$DIR/../packages_${distro_name}" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
   uur native "$pkg" "Installing"
   sudo -v &
   # Print alternating character
-  echo -ne "${chars[i % 4]}\r"
+  echo -ne "${chars[i % ${#chars[@]}]}\r"
   ((i++))
 done
