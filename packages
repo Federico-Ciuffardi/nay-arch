@@ -33,6 +33,7 @@ kitty
 fzf
 ripgrep
 bat
+main/fd
 
 ## editor
 gimp
