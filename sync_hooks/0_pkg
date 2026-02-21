@@ -26,6 +26,8 @@ draw_heading "Sync packages"
 # Characters to alternate
 chars=('|' '/' '-' '\')
 i=0
+echo -ne "${chars[i % 2]}\r"
+((i++))
 sudo -v
 # TODO merge loops
 for pkg in $(cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
