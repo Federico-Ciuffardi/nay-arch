@@ -4,7 +4,7 @@ source /usr/lib/naylib
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
-draw_heading "Install packages"
+draw_heading "Update packages (native)"
 
 distro_name=$(lsb_release -i | sed 's/.*:\s*//g')
 case "$distro_name" in
@@ -17,9 +17,12 @@ Ubuntu)
   ;;
 esac
 
+draw_heading "Update packages (uur)"
+uur update
 uur upgrade
 pkill -RTMIN+3 dwmblocks
 
+draw_heading "Sync packages"
 for pkg in $(cat "$DIR/../packages" | sed -e '/^[ \t]*#/d' | sed '/^$/d'); do
   sudo -v
   uur native "$pkg" "Installing"
