@@ -27,9 +27,9 @@ okular
 main/st
 tmux
 main/tpm
+kitty
 
 ## text editor
-neovim
 fzf
 ripgrep
 bat
@@ -144,3 +144,7 @@ nitrogen
 ## look and feel
 lxappearance
 qt5ct
+
+# js
+npm
+

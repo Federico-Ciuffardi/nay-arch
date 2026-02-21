@@ -26,6 +26,7 @@ network-manager-applet
 noto-color-emoji-fontconfig
 ttf-ubuntu-font-family
 ttf-firacode-nerd
+neovim
 
 ## laptop
 xf86-input-libinput
