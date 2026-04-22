@@ -34,3 +34,7 @@ blight
 
 ## dependencies
 libexif
+
+## dns
+avahi
+nss-mdns
