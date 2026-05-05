@@ -6,6 +6,7 @@ python-pynvim
 xorg-xinit
 xorg-xclipboard
 polkit-gnome
+kvantum-theme-breeze-git
 
 # Only wanted on Arch
 main/whatsapp-nativefier
