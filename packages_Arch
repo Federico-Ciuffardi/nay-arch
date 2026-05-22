@@ -9,7 +9,7 @@ polkit-gnome
 kvantum-theme-breeze-git
 
 # Only wanted on Arch
-main/whatsapp-nativefier
+elecwhat-bin
 
 # TODO unify duplicates in packages_Ubuntu 
 termdown
