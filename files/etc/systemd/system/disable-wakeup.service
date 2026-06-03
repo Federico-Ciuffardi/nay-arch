@@ -1,0 +1,14 @@
+[Unit]
+Description=Disable device wakeup sources
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '\
+echo disabled > /sys/bus/usb/devices/3-1/power/wakeup; \
+echo disabled > /sys/bus/i2c/devices/i2c-GTCH7503:00/power/wakeup; \
+echo disabled > /sys/bus/i2c/devices/i2c-SYNA2BA6:00/power/wakeup; \
+echo disabled > /sys/bus/serio/devices/serio0/power/wakeup'
+
+[Install]
+WantedBy=multi-user.target
